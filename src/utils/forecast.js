@@ -15,7 +15,7 @@ const forecast = (latitude, longitude, callback) => {
             const currentData = body.current;
             callback(undefined, {
                 temperature: currentData.temperature,
-                forecast: currentData.weather_descriptions[0],
+                forecast: currentData.weather_descriptions[0] + " and wind speed is " + currentData.wind_speed + ". Humidity is " + currentData.humidity,
             })
         }
     })
